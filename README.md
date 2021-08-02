@@ -12,6 +12,7 @@
 - **trello-list-name-commit** - Trello list name for new commit, for example "Doing", "In Progress", etc
 - **trello-list-name-pr-open** - Trello list name for open pull request, for example "Reviewing", "In Review", etc
 - **trello-list-name-pr-closed** - Trello list name for closed pull request, for example "Testing", "Done", etc
+- **trello-card-id-pattern** - Custom pattern to extract Trello card ID, "#" by default
 
 #### Git Commit
 ```

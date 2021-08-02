@@ -26,6 +26,10 @@ inputs:
   trello-list-name-pr-closed:
     description: Trello list name for closed pull request, for example "Testing", "Done", etc
     required: false  
+  trello-card-id-pattern:
+    description: Custom pattern to extract Trello card ID
+    default: "#"
+    required: false
 runs:
   using: node12
   main: dist/index.js

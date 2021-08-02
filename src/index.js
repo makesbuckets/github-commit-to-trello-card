@@ -6,6 +6,7 @@ const { context = {} } = github;
 const { pull_request, head_commit } = context.payload;
 
 const regexPullRequest = /Merge pull request \#\d+ from/g;
+const trelloCardIdPattern = core.getInput('trello-card-id-pattern', { required: false }) || '#';
 const trelloApiKey = core.getInput('trello-api-key', { required: true });
 const trelloAuthToken = core.getInput('trello-auth-token', { required: true });
 const trelloBoardId = core.getInput('trello-board-id', { required: true });
@@ -16,8 +17,8 @@ const trelloListNamePullRequestClosed = core.getInput('trello-list-name-pr-close
 
 function getCardNumber(message) {
   console.log(`getCardNumber(${message})`);
-  let ids = message && message.length > 0 ? message.replace(regexPullRequest, "").match(/\#\d+/g) : [];
-  return ids && ids.length > 0 ? ids[ids.length-1].replace('#', '') : null;
+  let ids = message && message.length > 0 ? message.replace(regexPullRequest, "").match(new RegExp(`${trelloCardIdPattern}\\d+`, 'g')) : [];
+  return ids && ids.length > 0 ? ids[ids.length-1].replace(trelloCardIdPattern, '') : null;
 }
 
 async function getCardOnBoard(board, message) {
