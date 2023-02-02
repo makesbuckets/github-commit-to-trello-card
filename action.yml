@@ -1,5 +1,5 @@
-author: Dale Zak
-name: github-commit-to-trello-card-fork
+author: Nick Makes
+name: github-commit-to-trello-card-fork-fork
 description: GitHub Action to attach GitHub commits and pull requests to a Trello card
 branding:
   icon: 'check-square'  
@@ -31,5 +31,5 @@ inputs:
     default: "#"
     required: false
 runs:
-  using: node12
+  using: node16
   main: dist/index.js

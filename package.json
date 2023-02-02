@@ -1,6 +1,6 @@
 {
-  "name": "github-commit-to-trello-card",
-  "version": "2.0.0",
+  "name": "github-commit-to-trello-card-fork-fork",
+  "version": "3.0.0",
   "description": "GitHub Action to attach GitHub commits and pull requests to a Trello card",
   "main": "dist/index.js",
   "scripts": {
@@ -9,19 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dalezak/github-commit-to-trello-card.git"
+    "url": "git+https://github.com/makesbuckets/github-commit-to-trello-card.git"
   },
   "keywords": [
     "GitHub",
     "Trello",
     "Actions"
   ],
-  "author": "Dale Zak",
+  "author": "Nick Makes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dalezak/github-commit-to-trello-card/issues"
+    "url": "https://github.com/makesbuckets/github-commit-to-trello-card/issues"
   },
-  "homepage": "https://github.com/dalezak/github-commit-to-trello-card#readme",
+  "homepage": "https://github.com/makesbuckets/github-commit-to-trello-card#readme",
   "dependencies": {
     "@actions/core": "^1.2.7",
     "@actions/github": "^4.0.0",
